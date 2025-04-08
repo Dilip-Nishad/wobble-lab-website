@@ -185,6 +185,79 @@ p {
     transform: perspective(1000px) rotateY(-5deg);
 }
 
+/* Benefits Section */
+.benefits-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 1rem auto 0;
+}
+
+.benefits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.benefits-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.benefits-row-bottom {
+    padding: 0 10%;
+}
+
+.benefit-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border-top: 4px solid var(--secondary-color);
+    flex: 1;
+    max-width: 350px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.benefit-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -219,6 +292,119 @@ p {
     color: var(--primary-color);
 }
 
+/* Drone Types Section */
+.drone-types-section {
+    background-color: #002231;
+    color: white;
+    padding: 6rem 0;
+}
+
+.drone {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.drone-types-section .section-title {
+    color: white;
+    padding: 20px 0;
+    font-size: 32px;
+}
+
+.Card-Style {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.drone-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.drone-card:hover {
+    transform: translateY(-5px);
+}
+
+.DroneImage {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.drone-type {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.drone-description {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+/* Applications Section */
+.applications-section {
+    padding: 6rem 0;
+    background-color: var(--white);
+}
+
+.applications-section .section-title {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.application-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    text-align: center;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.application-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.application-card h3 {
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.application-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.application-card .icon {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark-color);
@@ -251,6 +437,26 @@ p {
     
     .cta-buttons {
         justify-content: center;
+    }
+    
+    .benefits-row {
+        flex-wrap: wrap;
+    }
+    
+    .benefits-row-bottom {
+        padding: 0;
+    }
+    
+    .benefit-card {
+        min-width: 250px;
+    }
+    
+    .Card-Style {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .applications-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -294,5 +500,32 @@ p {
         margin: 0.5rem 0;
         width: 100%;
         max-width: 250px;
+    }
+    
+    .benefits-section {
+        padding: 4rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .benefits-container {
+        gap: 1rem;
+    }
+    
+    .benefit-card {
+        min-width: 100%;
+    }
+    
+    .applications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .Card-Style {
+        grid-template-columns: 1fr;
     }
 }
