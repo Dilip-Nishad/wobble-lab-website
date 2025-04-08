@@ -3,16 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sample Website for Deployment Practice">
-    <title>Wobble Lab Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mining Drones | Future of Mineral Exploration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1 id="title">Hello, Wobble Lab!</h1>
-        <button onclick="changeColor()">Change Text Color</button>
-    </div>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">🛠️</span>
+                    <span class="logo-text">MiningDrones</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <script src="script.js"></script>
+    <main class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Mining Drones</h1>
+                    <h2>Welcome to the Future of Mining</h2>
+                    <p class="lead">Our advanced drone technology integrates cutting-edge science to optimize operations, enhance safety standards, and deliver unparalleled data accuracy for the mining industry.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">Request Demo</a>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mining drone in action" class="drone-img">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 MiningDrones Technologies. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
